@@ -1,0 +1,17 @@
+name: "agent-handoff-controller"
+description: "Dispatches and supervises execution handoffs between distinct specialized agent personas."
+input_schema:
+  type: object
+  properties:
+    target_agent:
+      type: string
+      description: "Identifier of the agent persona to receive the execution handoff."
+    handoff_message:
+      type: string
+      description: "Contextual instruction or summary passed to the receiving agent."
+    preserve_context:
+      type: boolean
+      description: "Whether to retain the full conversation history or provide a summarized context."
+      default: true
+  required:
+    - target_agent

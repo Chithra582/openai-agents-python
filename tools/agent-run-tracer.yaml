@@ -1,0 +1,21 @@
+name: "agent-run-tracer"
+description: "Captures multi-agent turn spans, tool calls, token usage, and OpenTelemetry trace events."
+input_schema:
+  type: object
+  properties:
+    trace_id:
+      type: string
+      description: "Unique identifier for the agent execution trace."
+    action:
+      type: string
+      description: "Tracing action to execute."
+      enum: ["start_span", "end_span", "log_event", "export_trace"]
+    span_name:
+      type: string
+      description: "Name of the trace span (e.g., 'agent_turn', 'tool_call')."
+    metadata:
+      type: object
+      description: "Additional structured attributes to attach to the trace span."
+  required:
+    - trace_id
+    - action

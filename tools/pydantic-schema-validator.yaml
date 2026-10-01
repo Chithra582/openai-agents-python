@@ -1,0 +1,18 @@
+name: "pydantic-schema-validator"
+description: "Inspects function calling tool definitions and validates runtime JSON payloads against Pydantic models."
+input_schema:
+  type: object
+  properties:
+    model_name:
+      type: string
+      description: "Name of the target Pydantic model class."
+    payload:
+      type: object
+      description: "The JSON data object to validate against the Pydantic schema."
+    strict:
+      type: boolean
+      description: "Whether to enforce strict type validation without type coercion."
+      default: true
+  required:
+    - model_name
+    - payload

@@ -1,0 +1,19 @@
+name: "guardrail-policy-evaluator"
+description: "Evaluates incoming prompts and generated model outputs against safety policies and regex filters."
+input_schema:
+  type: object
+  properties:
+    stage:
+      type: string
+      description: "Guardrail evaluation stage."
+      enum: ["input", "output"]
+    content:
+      type: string
+      description: "The text content or payload to evaluate against active guardrails."
+    policy_group:
+      type: string
+      description: "Specific policy suite to enforce (e.g., 'pii_filter', 'content_safety')."
+      default: "default"
+  required:
+    - stage
+    - content

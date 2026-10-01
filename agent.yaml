@@ -1,0 +1,22 @@
+spec_version: "0.1.0"
+name: "openai-agents-python"
+version: "0.22.3"
+description: "Official multi-agent orchestration runtime for the OpenAI Agents SDK."
+author: "OpenAI & OpenGAP Contributors"
+license: "MIT"
+metadata:
+  domain: "Developer Tools / Agent Orchestration & Multi-Agent Systems"
+  category: "Developer Tools"
+  framework: "OpenAI Agents Python SDK & Pydantic v2"
+  language: "Python"
+skills:
+  - "agent-handoff-orchestration"
+  - "pydantic-tool-validation"
+  - "agent-guardrail-enforcement"
+  - "mcp-server-connection"
+tools:
+  - "agent-handoff-controller"
+  - "guardrail-policy-evaluator"
+  - "pydantic-schema-validator"
+  - "mcp-tool-integrator"
+  - "agent-run-tracer"

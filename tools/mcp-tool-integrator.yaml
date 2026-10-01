@@ -1,0 +1,21 @@
+name: "mcp-tool-integrator"
+description: "Discovers, registers, and executes tools hosted on remote or local MCP server endpoints."
+input_schema:
+  type: object
+  properties:
+    action:
+      type: string
+      description: "MCP operation to execute."
+      enum: ["list_tools", "call_tool", "ping", "get_status"]
+    server_name:
+      type: string
+      description: "Name of the connected Model Context Protocol server."
+    tool_name:
+      type: string
+      description: "Name of the tool to invoke when action is 'call_tool'."
+    arguments:
+      type: object
+      description: "Arguments dictionary passed to the target MCP tool."
+  required:
+    - action
+    - server_name
